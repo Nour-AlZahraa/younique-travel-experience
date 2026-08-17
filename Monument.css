@@ -1,0 +1,874 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --orange:#ffa500;
+    --blue: #1E90FF;
+    --teal: #1ABC9C;
+    --dark-bg: #0d1117;
+    --light-bg: #f5f5f5;
+    --text-light: #fff;
+    --text-dark: #333;
+}
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--orange);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+    
+}
+
+.heading span{
+    font-size: 3.5rem ;
+    background: rgba(255, 165, 0,.2);
+    color:var(--orange);
+    border-radius: .5rem;
+    padding:.2rem 1rem;
+}
+
+.heading span.space{
+    background:none;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color:#fff;
+    padding:.8rem 3rem;
+    border:.2rem solid var(--orange);
+    cursor:pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background:rgba(255, 165, 0,.2) ;
+    color:var(--orange);
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+     background: linear-gradient(
+        135deg,
+        #FFD97D,  /* warm sunrise gold */
+        #1ABC9C,  /* ocean teal */
+        #1E90FF   /* sky blue */
+    );
+    /*background: linear-gradient(135deg, #1ABC9C, #1E90FF);*/
+    z-index: 1000;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo{
+    font-size:2.5rem;
+    font-weight: bolder;
+    color:whitesmoke;
+    /*text-transform: uppercase;*/
+}
+
+header .logo span{
+   color: var(--orange);
+}
+
+header .navbar a{
+    color:#fff;
+    font-size:2rem;
+    margin:0 .8rem;
+}
+
+header .navbar a:hover{
+    color: var(--orange);
+}
+
+header .icons i{
+    font-size: 2.5rem;
+    color:#fff;
+    cursor:pointer;
+    margin-right: 2rem;
+}
+
+header .icons i:hover{
+    color:var(--orange);
+}
+
+header .search-bar-container{
+    position: absolute;
+    top:100%;
+    left:0;
+    right:0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: .2rem solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+header .search-bar-container #search-bar{
+    width:100%;
+    padding:1rem;
+    text-transform: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .search-bar-container label{
+    color:#fff;
+    cursor:pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
+    color:var(--orange);
+}
+
+.login-form-container{
+    position:fixed;
+    top:-120%;
+    left:0;
+    z-index: 10000;
+    min-height:100vh;
+    width:100%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container.active{
+    top:0;
+}
+
+.login-form-container form{
+    margin:2rem;
+    padding:1.5rem 2rem;
+    border-radius: .5rem;
+    background:#fff ;
+    width:50rem;
+}
+
+.login-form-container form h3{
+    font-size: 3rem;
+    color:#444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.login-form-container form .box{
+    width:100%;
+    padding:1rem;
+    font-size: 1.7rem;
+    color:#333;
+    margin:.6rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+
+.login-form-container form .box:focus{
+    border-color: var(--orange);
+}
+
+.login-form-container form #remember{
+    margin:2rem 0;
+}
+
+.login-form-container form label{
+    font-size: 1.5rem;
+}
+
+.login-form-container form .btn{
+    display:block;
+    width:100%;
+}
+
+.login-form-container form p{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color:#666;
+}
+
+.login-form-container form p a{
+    color:var(--orange)
+}
+
+.login-form-container form p a:hover{
+    color:#333;
+    text-decoration:underline ;
+}
+
+.login-form-container #form-close{
+    position: absolute;
+    top:2rem;
+    right:3rem;
+    font-size: 3rem;
+    color:#fff;
+    cursor:pointer;
+}
+
+#menu-bar{
+    color:#fff;
+    border:.1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding:.4rem 0.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+footer{
+    background: #333;
+}
+
+footer {
+    background: url('Gallery/beach-1761410_640.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.5); /* dark overlay for readability */
+    z-index: 0;
+}
+
+footer .box-container,
+footer .credit {
+    position: relative;
+    z-index: 1;
+}
+
+
+footer .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    padding:1rem 0;
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: .2rem 0;
+    color:#fff;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: .2rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--orange);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color:#fff;
+}
+
+.footer .credit span{
+    color:var(--orange);
+}
+
+@media(max-width:1200px){
+
+    html{
+    font-size: 55%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+   }
+}
+
+@media (max-width:991px){
+   header{
+    padding:2rem;
+   }
+   section{
+    padding:2rem;
+   }
+}
+
+@media (max-width:768px){
+   #menu-bar{
+    display:initial;
+   }
+
+   header .navbar{
+     position: absolute;
+     top:100%;
+     right:0;
+     left:0;
+     background: #333;
+     border-top: .1rem solid rgb(255,255,255,.2);
+     padding:1rem 2rem;
+     clip-path:polygon(0 0, 100% 0, 100% 0, 0 0) ;
+   }
+
+   header .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+   }
+
+   header .navbar a{
+      display:block;
+      border-radius:.5rem ;
+      padding:1.5rem;
+      margin: 1.5rem 0;
+      background: #222;
+    }
+}
+
+header {
+    background: linear-gradient(135deg, #FFD97D,#333,orange, #1ABC9C, #1E90FF);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Active navigation link */
+header .navbar a.active {
+    color: var(--orange);
+    font-weight: bold;
+    border-bottom: 2px solid var(--orange);
+}
+
+/* ================================
+   PARTHENON FULL IMAGE HERO
+================================ */
+
+.parthenon-hero-full {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("Gallery/view-world-monument-celebrate-world-heritage-day.jpg")
+    center / cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* SCRATCHED / ZIGZAG TOP & BOTTOM */
+  clip-path: polygon(
+    0% 3%, 5% 0%, 10% 3%, 15% 0%, 20% 3%, 25% 0%, 30% 3%, 35% 0%,
+    40% 3%, 45% 0%, 50% 3%, 55% 0%, 60% 3%, 65% 0%, 70% 3%, 75% 0%,
+    80% 3%, 85% 0%, 90% 3%, 95% 0%, 100% 3%,
+
+    100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%,
+    70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%,
+    40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%,
+    10% 97%, 5% 100%, 0% 97%
+  );
+}
+
+/* TEXT BOX */
+.parthenon-overlay {
+  max-width: 800px;
+  padding: 4rem;
+  background: rgba(0,0,0,0.35);
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* SMALL TAG */
+.parthenon-overlay .hero-tag {
+  display: inline-block;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: var(--orange);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* TITLE */
+.parthenon-overlay h1 {
+  font-size: 6rem;
+  color: var(--teal);
+  margin-bottom: 2rem;
+}
+
+/* TEXT */
+.parthenon-overlay p {
+  font-size: 1.9rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #f1f1f1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .parthenon-overlay h1 {
+    font-size: 4rem;
+  }
+  .parthenon-overlay {
+    padding: 3rem;
+  }
+}
+
+.parthenon-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 6rem 10%;
+  background: #f9f9f9;
+}
+
+.stat h3 {
+  font-size: 4rem;
+  color: #ffa500;
+}
+
+.stat p {
+  font-size: 1.6rem;
+  color: #555;
+  text-align: center;
+}
+
+.parthenon-history {
+  padding: 6rem 20%;
+  background: #f9f9f9;
+}
+
+.parthenon-history h2 {
+  font-size: 3.2rem;
+  color: #1ABC9C;
+  margin-bottom: 2rem;
+}
+
+.parthenon-history p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.monument-meaning {
+  background: var(--light-bg);
+  padding: 8rem 10%;
+  text-align: center;
+}
+
+.monument-meaning h2 {
+  font-size: 3.8rem;
+  color: var(--teal);
+  margin-bottom: 5rem;
+}
+
+.meaning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem;
+}
+
+.meaning-card {
+  background: #fff;
+  padding: 4rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.meaning-card:hover {
+  transform: translateY(-10px);
+}
+
+.meaning-card i {
+  font-size: 4rem;
+  color: var(--orange);
+  margin-bottom: 2rem;
+}
+
+.meaning-card h3 {
+  font-size: 2.2rem;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+}
+
+.meaning-card p {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.monument-facts {
+  background: #fff;
+  padding: 7rem 12%;
+}
+
+.monument-facts h2 {
+  text-align: center;
+  font-size: 3.6rem;
+  color: var(--orange);
+  margin-bottom: 4rem;
+}
+
+.monument-truths {
+  background: var(--light-bg);
+  padding: 9rem 12%;
+  text-align: center;
+}
+
+.monument-truths h2 {
+  font-size: 4rem;
+  color: var(--teal);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.facts-energy {
+  background: var(--light-bg);
+  padding: 10rem 12%;
+}
+
+.facts-energy h2 {
+  font-size: 5rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 7rem;
+  position: relative;
+}
+
+.facts-energy h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(to right, var(--orange), var(--teal));
+}
+
+/* FACT */
+.energy-fact {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  transform: translateX(-40px);
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards;
+}
+
+.energy-fact:nth-child(2) { animation-delay: 0.2s; }
+.energy-fact:nth-child(3) { animation-delay: 0.4s; }
+.energy-fact:nth-child(4) { animation-delay: 0.6s; }
+
+/* NUMBER */
+.energy-number {
+  font-size: 7rem;
+  font-weight: 800;
+  color: var(--orange);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* TEXT */
+.energy-fact p {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #222;
+  max-width: 750px;
+  line-height: 1.6;
+}
+
+/* HOVER ENERGY */
+.energy-fact:hover .energy-number {
+  color: var(--teal);
+}
+
+.energy-fact:hover {
+  transform: translateX(0) scale(1.02);
+}
+
+/* ANIMATION */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .energy-fact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .energy-number {
+    font-size: 5rem;
+  }
+
+  .energy-fact p {
+    font-size: 1.9rem;
+  }
+}
+
+/* ==============================
+   BOOK NOW FINAL SECTION
+============================== */
+.book-now-section {
+  position: relative;
+  width: 100%;
+  padding: 10rem 5%;
+  background: linear-gradient(135deg, #FFA500, #1ABC9C, #1E90FF);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.book-now-section::before {
+  content: '';
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+
+.book-now-overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book-now-overlay h2 {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px rgba(0,0,0,0.7);
+  animation: popIn 1s ease forwards;
+}
+
+.book-now-overlay p {
+  font-size: 2rem;
+  color: #f1f1f1;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  animation: fadeUp 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.book-now-overlay .btn {
+  padding: 1.2rem 5rem;
+  font-size: 2rem;
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--orange), var(--teal));
+  box-shadow: 0 0 30px rgba(255,165,0,0.8), 0 0 60px rgba(26,188,156,0.6);
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.book-now-overlay .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255,165,0,1), 0 0 80px rgba(26,188,156,0.8);
+}
+
+
+/* Animations */
+@keyframes popIn {
+  0% {opacity: 0; transform: scale(0.5);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadeUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pulse {
+  0%, 100% {transform: scale(1);}
+  50% {transform: scale(1.05);}
+}
+
+@keyframes floatAnim {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-15px);}
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .book-now-overlay h2 {
+    font-size: 3rem;
+  }
+  .book-now-overlay p {
+    font-size: 1.6rem;
+  }
+  .book-now-overlay .btn {
+    padding: 0.8rem 3rem;
+    font-size: 1.6rem;
+  }
+  .floating-icon {
+    font-size: 2rem;
+  }
+}
+
+.side-deco {
+  position: absolute;
+  font-size: 16rem; /* bigger leaves */
+  opacity: 0.6;
+  animation: floatSide 6s ease-in-out infinite alternate;
+}
+
+.side-deco.left {
+  left: -3rem;
+}
+
+.side-deco.right {
+  right: -3rem;
+}
+
+/* Floating animation */
+@keyframes floatSide {
+  0% {transform: translateY(0) rotate(0deg);}
+  50% {transform: translateY(-30px) rotate(15deg);}
+  100% {transform: translateY(0) rotate(-15deg);}
+}
+
+/* Adjust for multiple leaves with different delays */
+.side-deco:nth-child(2) { animation-delay: 1s; }
+.side-deco:nth-child(3) { animation-delay: 0.5s; }
+.side-deco:nth-child(4) { animation-delay: 1.5s; }
+
+/* Other styling remains the same */
+.parthenon-history-wow {
+  background: var(--light-bg);
+  padding: 10rem 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.parthenon-history-wow h2 {
+  font-size: 4rem;
+  color: var(--teal);
+  margin-bottom: 6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.era {
+  margin: 4rem 0;
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  animation: floatIn 1s forwards;
+  animation-delay: calc(var(--i) * 0.6s);
+}
+
+.era-number {
+  display: block;
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--orange);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.era p {
+  font-size: 2rem;
+  color: #222;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.parthenon-history-wow .btn {
+  margin-top: 5rem;
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 10px;
+  border: 0.2rem solid var(--orange);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.parthenon-history-wow .btn:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+@keyframes floatIn {
+  0% {opacity:0; transform: translateY(50px) scale(0.9);}
+  100% {opacity:1; transform: translateY(0) scale(1);}
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .side-deco {font-size:3.5rem;}
+  .era-number {font-size:3.5rem;}
+  .era p {font-size:1.5rem;}
+  .parthenon-history-wow h2 {font-size:3rem;}
+  .parthenon-history-wow .btn {font-size:1.5rem; padding:0.8rem 3rem;}
+}

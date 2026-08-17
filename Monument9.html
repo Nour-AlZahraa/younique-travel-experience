@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Younique_Travel</title>
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+     />
+     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="Monument9.css">
+</head>
+
+<body>
+<header>
+    
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>Y</span>ounique Travel</a>
+    
+    <nav class="navbar">
+        <a href="Index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="packages.html">Packages</a>
+        <a href="services.html">Services</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="feedback.html">Review</a>
+        <a href ="about1.html">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Search Here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>  
+
+<div class="login-form-container">
+    <i class="fa-solid fa-times" id="form-close"></i>
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="Enter Your Email">
+        <input type="password" class="box" placeholder="Enter Your Password"> 
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>Forget Password? <a href="#">Click Here</a></p>
+        <p>Don't Have an Account? <a href="#">Register Now</a></p>
+    </form>
+</div>
+
+<section class="hero-alpine">
+  <img 
+    src="Gallery/7.jpg"
+    alt="Château de Mille" 
+    class="hero-img"
+  >
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="reveal-title">Château de Mille</h1>
+    <p class="reveal-sub">Step into the Swiss Alps and experience timeless castle luxury.</p>
+    <a href="#explore" class="hero-btn reveal-btn">Explore the Experience</a>
+  </div>
+</section>
+
+<section class="floating-story">
+  <h2 class="story-heading">Discover Château de Mille</h2>
+
+  <div class="orbs-container">
+    <div class="story-orb" style="--i:0;">🏰<p>Grand Entrance</p></div>
+    <div class="story-orb" style="--i:1;">📚<p>Secret Library</p></div>
+    <div class="story-orb" style="--i:2;">🌲<p>Snow Garden</p></div>
+    <div class="story-orb" style="--i:3;">🗼<p>Alpine Tower</p></div>
+  </div>
+</section>
+
+<section class="castle-secrets">
+  <div class="secrets-content">
+    <h2>Castle Secrets Revealed</h2>
+    <p>Step inside Château de Mille and uncover stories that have been whispered through centuries. From hidden chambers to secret frescoes, every corner tells a tale of luxury, ingenuity, and history.</p>
+  </div>
+
+  <div class="secrets-facts">
+    <div class="fact">📜 Hidden chambers stored rare manuscripts and treasures.</div>
+    <div class="fact">🗼 Watchtower served as a secret alpine lookout.</div>
+    <div class="fact">🎨 Original 17th-century frescoes still adorn select rooms.</div>
+    <div class="fact">🌊 Lake reflections inspired famous Swiss painters.</div>
+    <div class="fact">🔥 Grand hall retains natural warmth during winters.</div>
+  </div>
+</section>
+
+
+<section class="castle-info-cards">
+  <h2 class="cards-heading">Secrets & Wonders of Château de Mille</h2>
+  
+  <div class="cards-container">
+    <div class="info-card">The castle’s kitchen still uses the original 17th-century hearth.</div>
+    <div class="info-card">Underground tunnels connect the wine cellar to secret service rooms.</div>
+    <div class="info-card">Some windows align with alpine sunrises, illuminating hidden murals.</div>
+    <div class="info-card">The library’s hidden alcoves store ancient maps of the Swiss Alps.</div>
+    <div class="info-card">Certain guest rooms retain original scented wooden panels with lavender aroma.</div>
+    <div class="info-card">The grand hall floor tiles align perfectly with the spring equinox sunrise.</div>
+  </div>
+</section>
+
+<section class="final-invitation">
+  <div class="invitation-content">
+    <h2>Your Château Experience Awaits</h2>
+    <p>Step into the Swiss Alps and immerse yourself in timeless luxury. Explore secret chambers, alpine views, and lavender gardens — an exclusive experience reserved for a select few. Limited availability this season.</p>
+    <div class="invitation-buttons">
+      <a href="#booking" class="btn-book">Book Now</a>
+      <a href="#gallery" class="btn-gallery">Return to Gallery</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("header .navbar a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+</body>

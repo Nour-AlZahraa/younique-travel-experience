@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Younique_Travel</title>
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+     />
+     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+<header>
+    
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>Y</span>ounique Travel</a>
+    
+    <nav class="navbar">
+        <a href="Index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="packages.html">Packages</a>
+        <a href="services.html">Services</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="feedback.html">Review</a>
+        <a href ="about1.html">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Search Here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>  
+
+<div class="login-form-container">
+    <i class="fa-solid fa-times" id="form-close"></i>
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="Enter Your Email">
+        <input type="password" class="box" placeholder="Enter Your Password"> 
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>Forget Password? <a href="#">Click Here</a></p>
+        <p>Don't Have an Account? <a href="#">Register Now</a></p>
+    </form>
+</div>
+
+<section class="book" id="book">
+   <h1 class="heading">
+      <span>b</span>
+      <span>o</span>
+      <span>o</span>
+      <span>k</span>
+      <span class="space"></span>
+      <span>n</span>
+      <span>o</span>
+      <span>w</span>
+   </h1>
+
+<div class="row">
+
+    <div class="image">
+        <img src="https://static.vecteezy.com/system/resources/previews/059/365/147/non_2x/travel-agency-web-concept-with-cartoon-people-design-operator-helping-tourist-with-choosing-travel-destination-booking-hotel-and-tickets-flat-illustration-isolated-on-white-background-vector.jpg" alt = "ERROR">
+    </div>
+    <form action="">
+        <div class="inputBox">
+            <h3>Where To</h3>
+            <input type="text" placeholder="Place Name">
+        </div>
+
+        <div class="inputBox">
+            <h3>How Many</h3>
+            <input type="number" placeholder="Number of Guests">
+        </div>
+
+        <div class="inputBox">
+            <h3>Arrivals</h3>
+            <input type="date" placeholder="">
+        </div>
+        
+        <div class="inputBox">
+            <h3>Leaving</h3>
+            <input type="date" placeholder="">
+        </div>
+
+        <input type="submit" class="btn" value="Book Now">
+        <p id="booking-success" class="typing-text"></p>
+    </form>
+
+</div>
+</section>
+
+
+<footer>
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>About US</h3>
+            <p>At our travel agency, we believe every journey should be unforgettable. We’re dedicated to creating seamless, exciting, and personalized travel experiences for every traveler.</p>
+        </div>
+           <div class="box">
+            <h3>Branch Locations</h3>
+            <a href="#">India</a>
+            <a href="#">USA</a>
+            <a href="#">Japan</a>
+            <a href="#">France</a>
+          </div>
+           
+          <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Packages</a>
+            <a href="#">Review</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+          </div>
+
+              
+          <div class="box">
+            <h3>Follow US</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Linkedins</a>
+          </div>
+    </div>
+    <h1 class="credit">Created By<span> Nour Hayek</span> | all rights reserved |</h1>
+</section>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("header .navbar a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+
+<script>
+const form = document.querySelector(".book form");
+const successText = document.getElementById("booking-success");
+
+const message = "Booking completed successfully!";
+let index = 0;
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // stop page refresh
+
+    successText.textContent = "";
+    successText.classList.add("active");
+    index = 0;
+
+    function typeEffect() {
+        if (index < message.length) {
+            successText.textContent += message.charAt(index);
+            index++;
+            setTimeout(typeEffect, 80);
+        }
+    }
+
+    typeEffect();
+});
+</script>
+</body>

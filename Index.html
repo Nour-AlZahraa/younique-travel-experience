@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Younique_Travel</title>
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+     />
+     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<header>
+    
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>Y</span>ounique Travel</a>
+    
+    <nav class="navbar">
+        <a href="Index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="packages.html">Packages</a>
+        <a href="services.html">Services</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="feedback.html">Review</a>
+        <a href ="about1.html">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Search Here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>  
+
+<div class="login-form-container">
+    <i class="fa-solid fa-times" id="form-close"></i>
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="Enter Your Email">
+        <input type="password" class="box" placeholder="Enter Your Password"> 
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>Forget Password? <a href="#">Click Here</a></p>
+        <p>Don't Have an Account? <a href="#">Register Now</a></p>
+    </form>
+</div>
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Adventure is Worthwhile</h3>
+        <p>Discover New Places With Us, Adventure Awaits !</p>
+        <a href="about1.html" class="btn">Discover More</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="Gallery/3.mp4"></span>
+        <span class="vid-btn" data-src="vid/1.1.mp4"></span>
+        <span class="vid-btn" data-src="vid/2.mp4"></span>
+        <span class="vid-btn" data-src="vid/4.mp4"></span>
+        <span class="vid-btn" data-src="vid/6.mp4"></span>
+        <span class="vid-btn" data-src="vid/5.mp4"></span>
+        <span class="vid-btn" data-src="vid/1.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="vid/3.mp4" id="video-slider" loop autoplay muted></video>
+        </video>
+    </div>
+
+</section>
+
+<!-- Articles Section -->
+<section class="articles" id="articles">
+    <h1 class="heading">
+        <span>D</span><span>i</span><span>s</span><span>c</span><span>o</span><span>v</span><span>e</span><span>r</span><span>i</span><span>e</span><span>s</span>
+    </h1>
+
+    <div class="box-container">
+        <!-- Article 1 -->
+        <div class="box">
+            <h3>Exploring Hidden Gems</h3>
+            <p>Travel beyond the usual tourist spots and uncover hidden gems that offer unique experiences, authentic local culture, and breathtaking scenery. Perfect for adventurous travelers seeking something special. From quiet villages to secret beaches, every hidden gem has a story to tell.</p>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="box">
+            <h3>Top Travel Tips</h3>
+            <p>Maximize your travel experience with our top tips on packing, planning, safety, and local etiquette. Learn how to make every trip smooth, enjoyable, and memorable. These practical tips will save time, money, and ensure you get the most out of your adventures.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>About US</h3>
+            <p>At our travel agency, we believe every journey should be unforgettable. We’re dedicated to creating seamless, exciting, and personalized travel experiences for every traveler.</p>
+        </div>
+           <div class="box">
+            <h3>Branch Locations</h3>
+            <a href="#">India</a>
+            <a href="#">USA</a>
+            <a href="#">Japan</a>
+            <a href="#">France</a>
+          </div>
+           
+          <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Packages</a>
+            <a href="#">Review</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+          </div>
+
+              
+          <div class="box">
+            <h3>Follow US</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Linkedins</a>
+          </div>
+    </div>
+    <h1 class="credit">Created By<span> Nour Hayek</span> | all rights reserved |</h1>
+</section>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("header .navbar a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>

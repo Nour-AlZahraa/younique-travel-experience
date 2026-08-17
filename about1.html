@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younique Travel - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="about1.css">
+</head>
+<body>
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>Y</span>ounique Travel</a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="book.html">Book</a>
+        <a href="packages.html">Packages</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html">Review</a>
+        <a href="about1.html">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="Search Here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+</header>
+
+
+<section class="home">
+  <div class="overlay"></div>
+  <div class="controls">
+        <span class="vid-btn active" data-src="Gallery/abt.mp4"></span>
+        <h1 class="bouncy-text">About Us</h1>
+        <p class="about-text luxury-line">Designed for those who don’t just travel — they experience.</p>
+    </div>
+
+    <div class="video-container">
+        <video src="Gallery/abt.mp4" id="video-slider" loop autoplay muted></video>
+        </video>
+    </div>
+</section>
+
+<section class="about" id ="abt">
+    <div class="image">
+        <img src="Gallery/portugal-3029665_1280.jpg" alt="Travel Image">
+    </div>
+
+    <div class="content">
+        <h3>Why Choose US ?</h3>
+        <p >✈️Travel isn’t just moving—it’s feeling alive. With us, every trip is packed with excitement, unforgettable moments, and stories you’ll tell for years. We don’t just plan journeys—we spark adventures. Choose us and let the world amaze you!</p>
+        <p >🗺️Where others give you destinations, we give you experiences. From breathtaking views to heart-racing adventures, we make every detail feel personal and unforgettable. Your dream trip isn’t just possible—it’s waiting. Let’s make it happen together.</p>
+        
+        <div class="icons-container">
+            <div class="icons">
+                <i class="fas fa-map"></i>
+                <span>Top Destinations</span>
+            </div>
+            <div class="icons">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Affordable Prices</span>
+            </div>
+            <div class="icons">
+                <i class="fas fa-headset"></i>
+                <span>24/7 Guide Services</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="box-container">
+        <div class="box">
+            <h3>About US</h3>
+            <p>At our travel agency, we believe every journey should be unforgettable. We’re dedicated to creating seamless, exciting, and personalized travel experiences for every traveler.</p>
+        </div>
+        <div class="box">
+            <h3>Branch Locations</h3>
+            <a href="#">India</a>
+            <a href="#">USA</a>
+            <a href="#">Japan</a>
+            <a href="#">France</a>
+        </div>
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Packages</a>
+            <a href="#">Review</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="box">
+            <h3>Follow US</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+    <h1 class="credit">Created By <span>Nour Hayek</span> | All rights reserved |</h1>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("header .navbar a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
