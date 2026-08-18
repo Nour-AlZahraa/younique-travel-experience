@@ -263,7 +263,7 @@ footer{
 }
 
 footer {
-    background: url('Gallery/beach-1761410_640.jpg') no-repeat center center/cover;
+    background: url('beach-1761410_640.jpg') no-repeat center center/cover;
     position: relative;
     color: #fff;
 }
@@ -409,7 +409,7 @@ header .navbar a.active {
   width: 100%;
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("Gallery/view-world-monument-celebrate-world-heritage-day.jpg")
+    url("view-world-monument-celebrate-world-heritage-day.jpg")
     center / cover no-repeat;
 
   display: flex;
