@@ -436,7 +436,7 @@ header .search-bar-container label:hover{
             position: relative;
             width: 100%;
             height: 600px;
-            background: url('Gallery/pyramd.jpg') center/cover no-repeat;
+            background: url('pyramd.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -502,7 +502,7 @@ header .search-bar-container label:hover{
         }
 
 footer {
-    background: url('Gallery/beach-1761410_640.jpg') no-repeat center center/cover;
+    background: url('beach-1761410_640.jpg') no-repeat center center/cover;
     position: relative;
     color: #fff;
 }
