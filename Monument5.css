@@ -336,7 +336,7 @@ header .navbar a.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('Gallery/Mecha.png') center/cover no-repeat;
+  background: url('Mecha.png') center/cover no-repeat;
   overflow: hidden;
   text-align: center;
    background-attachment: scroll; /* for parallax */
